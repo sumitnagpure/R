@@ -1,5 +1,5 @@
-### Control Statements ####
-### If Statement ####
+#### Control Statements ####
+#### If Statement ####
 
 si <- 103
 if (si<200){
@@ -13,11 +13,30 @@ if (si<100){
   print("number more than 100")
 }
 
-########## for loop ##########
+##### for loop ######
 
 for(i in seq(1,10,2)){
   print(i*i)
 }
+
+
+#### While ####
+# break
+cnt <- 1
+while (cnt <8){
+  print(cnt)
+  if (cnt==4) break
+  cnt <- cnt+1
+}
+
+# next
+cnt <- 1
+while (cnt <8){
+  cnt <- cnt+1
+  if (cnt==4) next
+  print(cnt)
+}
+
 
 
 
