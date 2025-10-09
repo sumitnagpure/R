@@ -1,11 +1,11 @@
 #1. Orders.csv from Data-sets.
-orders=read.csv('G:/My Drive/R/Datasets/Orders.csv')
-#    Import and generate the following outputs:
-#   a. Display the meta-data of its data from a object.
-#     
-  str(orders)
-#   b. Descriptive Statistics:
+  orders=read.csv('G:/My Drive/R/Datasets/Orders.csv')
+# Import and generate the following outputs:
+# a. Display the meta-data of its data from a object.
 
+  str(orders)
+  
+# b. Descriptive Statistics:
   summary(orders)
   
 #2. cars2018.csv from Data-sets.
@@ -18,7 +18,7 @@ orders=read.csv('G:/My Drive/R/Datasets/Orders.csv')
   table(aspiration ,transmisssion)  
   
 #3. 
-  cars=read.csv('cars2018.csv', stringsAsFactors = T)
+  cars=read.csv('G:/My Drive/R/Datasets/cars2018.csv', stringsAsFactors = T)
   cars$LNMPG <- log(cars$MPG)  
   summary(cars$LNMPG)
   
@@ -42,10 +42,18 @@ orders=read.csv('G:/My Drive/R/Datasets/Orders.csv')
   
   g <- c(1,2,NA,4,5,6)
   f <- c(1,2,NA,4,5,6)
+  
   imputeMean <- function(i) {
     m <- mean(i,na.rm=T)
     i <- ifelse(is.na(i)==T,m,i)
     i
   }
   imputeMean(g)
+  
+  data('airquality')
+  airquality$Ozone <- imputeMean(airquality$Ozone)
+  summary(is.na(airquality[,1])) #indicating no NA values
+
+  
+  
   

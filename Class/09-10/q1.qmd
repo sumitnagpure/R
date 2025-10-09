@@ -1,0 +1,32 @@
+---
+title: "one"
+format: html
+editor: visual
+---
+
+## Analysis
+
+Load the dataset
+
+```{r}
+cars2018=read.csv('cars2018.csv', stringsAsFactors = T)
+cars2018
+```
+
+Summary of MPG;
+
+```{r}
+summary(cars2018$MPG)
+```
+
+```{python}
+import pandas as pd
+crs=pd.read_csv('cars2018.csv')
+crs.head
+```
+
+Scatter-plot:
+
+```{r}
+
+```
